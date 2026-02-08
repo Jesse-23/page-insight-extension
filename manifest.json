@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Page Insight",
+  "version": "1.0",
+  "description": "Analyze page elements and interact with the page",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
